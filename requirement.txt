@@ -1,0 +1,6 @@
+openai
+streamlit
+datetime
+requests
+python-dotenv
+ 
