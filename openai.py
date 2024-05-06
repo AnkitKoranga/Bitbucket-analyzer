@@ -1,11 +1,11 @@
 import requests
-
+import os
 def analyze_text(combined_messages):
     
 
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {openai_api_key}"
+        "Authorization": f"Bearer {os.getenv(openai_api_key)}"
     }
 
     payload = {
@@ -61,7 +61,7 @@ Provide suggestions for improving commit message quality, such as using descript
 def analyze_pr(user, comments):
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {openai_api_key}"
+        "Authorization": f"Bearer {os.getenv(openai_api_key)}"
     }
 
     payload = {
